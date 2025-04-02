@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  box-sizing: border-box;
+}
 
 body {
   display: flex;
@@ -21,49 +24,82 @@ h3 {
   padding: 0;
 }
 
-ul {
-  list-style-type: none;
-  display: flex;
+.header,
+.hero {
+  width: 100%;
+  background-color: #1f2937;
 }
 
-a {
+.header .container,
+.hero .container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1000px;
+  min-width: 600px;
+  margin: 0 auto;
+}
+
+.header .container {
+  align-items: center;
+}
+
+.header {
+  padding: 15px 10px;
+}
+
+.header ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+.header a,
+.hero-left p {
   text-decoration: none;
   color: #e5e7eb;
   font-size: 18px;
 }
 
-.header,
-.footer {
-  padding: 0;
-  margin: 0;
-}
-
-.header,
-.hero,
-.footer {
-  background-color: #1f2937;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-}
-
-.content {
-  flex: 1;
+.header p {
+  color: #f9faf8;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .hero {
-}
-
-.footer {
+  flex: 1;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
-.header p {
-  font-size: 24px;
+.hero .container {
+  gap: 50px;
+}
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.hero-left h1 {
   color: #f9faf8;
-  font-weight: bold;
+  font-size: 48px;
+  font-weight: 900;
+}
+
+.hero-left button {
+  background-color: #3882f6;
+  border: 0 none;
+  border-radius: 5px;
+  color: #e5e7eb;
+  font-size: 18px;
+  padding: 10px 30px;
+}
+
+.hero img {
+  max-height: 350px;
+  width: auto;
 }
